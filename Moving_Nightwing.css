@@ -1,0 +1,204 @@
+/** @format */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li,
+a,
+button {
+  font-family: "montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+button {
+  display: inline-block;
+  width: 130px;
+  height: 45px;
+  background: linear-gradient(45deg, #29d7d4, #022d2d);
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  line-height: 25px;
+  box-shadow: 3px 8px 44px rgb(1, 3, 22);
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+}
+
+Body {
+  background: url("img/background01.png");
+  background-size: cover;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-color: #292547;
+  background-position-y: 158px;
+}
+
+/* Firstly, I'm going to set the background to cover the entire screen with background- size cover, followed by overflow hidden */
+
+#Nightwing {
+  position: relative;
+  background-image: url("img/Nightwing_sprites_03.png");
+  top: 330px;
+  width: 250px;
+  height: 355px;
+  animation: walking_animation 1s steps(12) infinite,
+    move_forward 20s linear infinite;
+}
+
+/* Next, we are going to add some style to Nightwing. We set it 330px from the top and add the actual image image of Nightwing as a background image. Our panda file has a width of 3000px, but we just want to display the 1st image out of the 12 images. To do that, we alter width and height. */
+
+/* The height for the first Nightwing image will be 330px. For the width, we divide it into 12 equal parts for each frame */
+
+/* animation-name: determines the name of the animation */
+
+@keyframes walking_animation {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 3000px;
+  }
+}
+
+/* Walking_animation will go through all the 12 images of Nightwing. To do this, we move the background-position from 0 to 3000px, which is the width of the image. */
+
+@keyframes move_forward {
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(2000px);
+  }
+}
+
+/* Now we add animations. The first animation is called Walking_animation. It will go through all the 12 images of Nightwing, but it won’t move from its original position. To make it move on the x-axis, we add add another animation called move_forward that will move the image from left to right on the screen. */
+
+/* Move_forward will move nightwing on the x-axis using the transform property. We’ll spawn Nightwing at -100px, and it will go to the end of the screen. */
+
+/* I'm going to repeat the process for the bats but add more percentages along the course of the animation so that they will fly in arch across the cave on multiple axis */
+
+.bat1 {
+  position: relative;
+  background-image: url("img/Bats\ 01.png");
+  width: 125px;
+  height: 89px;
+  animation: Flight_animation_1 0.6s steps(4) infinite,
+    batmove 12s linear infinite;
+}
+
+/* animation-iteration-count: this property define how many times an animation will run */
+
+.bat2 {
+  position: relative;
+  background-image: url("img/Bats\ 02.png");
+  width: 200px;
+  height: 127px;
+  animation: Flight_animation-2 0.5s steps(4) infinite,
+    batmove2 12s linear infinite;
+}
+
+@keyframes batmove {
+  0% {
+    transform: translate(-100px);
+  }
+
+  25% {
+    transform: translate(300px, -200px);
+  }
+
+  50% {
+    transform: translate(600px, -100px);
+  }
+
+  75% {
+    transform: translate(1500px, -200px);
+  }
+
+  100% {
+    transform: translate(2000px);
+  }
+}
+
+@keyframes batmove2 {
+  0% {
+    transform: translate(-100px);
+  }
+
+  25% {
+    transform: translate(200px, -300px);
+  }
+
+  50% {
+    transform: translate(700px, -100px);
+  }
+
+  75% {
+    transform: translate(1200px, -200px);
+  }
+
+  100% {
+    transform: translate(2000px);
+  }
+}
+
+@keyframes Flight_animation_1 {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 500px;
+  }
+}
+
+@keyframes Flight_animation-2 {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 800px;
+  }
+}
+
+button:hover {
+  color: #022d2d;
+}
+
+.logo {
+  width: 150px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.nav__links {
+  list-style: none;
+}
+
+.nav__links li {
+  display: inline-block;
+  padding: 0px 100px;
+}
+
+.nav__links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+  color: rgb(40, 131, 197);
+}
