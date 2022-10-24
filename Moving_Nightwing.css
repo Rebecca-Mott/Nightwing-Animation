@@ -62,7 +62,7 @@ Body {
     move_forward 20s linear infinite;
 }
 
-/* Next, we are going to add some style to Nightwing. We set it 330px from the top and add the actual image image of Nightwing as a background image. My Nightwing file has a width of 3000px, but we just want to display the 1st image out of the 12 images. To do that, we alter width and height. */
+/* Next, I'm going to add some style to Nightwing. I set it to 330px from the top and add the actual image image of Nightwing as a background image. My Nightwing file has a width of 3000px, but we just want to display the 1st image out of the 12 images. To do that, we alter width and height. */
 
 /* The height for the first Nightwing image will be 330px. For the width, we divide it into 12 equal parts for each frame */
 
