@@ -1,5 +1,3 @@
-/** @format */
-
 let audio = document.getElementById("audio");
 let PlayPauseBTN = document.getElementById("PlayPauseBTN");
 let count = 0;
